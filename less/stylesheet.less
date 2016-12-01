@@ -1,0 +1,55 @@
+@import "light-theme";
+// @import "dark-theme";
+
+// indents
+@app-margin: 20px;
+@big-margin: @app-margin*2;
+@btn-padding: 15px;
+
+//fonts
+@arial-big: 22px "Arial";
+@sans-header: bold 42px sans-serif;
+
+@text-color:      #212121;
+
+//path 
+@images: "../img";
+@themes: "../../src/themes";
+// @import "@{themes}/tidal-wave.less";
+
+.my-circle(@width: 50px, @height: 50px, @radius: 50%, @color: @green, @border-color: @orange) {
+	width: @width;
+	height: @height;
+	border-radius: @radius;
+	background-color: @color;
+	border: 1px solid @border-color
+}
+
+.circle {
+	.my-circle;
+}
+.ellipse {
+	.my-circle(200px, 100px, 50%, @green, @blue);
+}
+
+body {
+	background: @blue;
+}
+.masthead {
+	.text-muted {
+		font: @sans-header;
+		text-align: center;
+	}
+}
+
+.btn-primary {
+	background: @green;
+	font: @arial-big;
+	color: @text-color; 
+	padding: @btn-padding @btn-padding*2;
+}
+
+.jumbotron {
+	background: @orange;
+}
+
